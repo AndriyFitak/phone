@@ -1,0 +1,31 @@
+.list{ 
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    align-items: center;
+    list-style: none;
+    &_item{ 
+        width: 20%;
+        height: 200px ;
+        margin: 0 auto;
+        padding: 5px;
+        border: 1px solid teal;
+        border-radius: 8px;
+        &_text{
+            text-align: center;
+        }
+        &_button{
+            margin-top: 50px;
+            margin-left: 10px;
+        }
+    }
+}
+.quantity_controls{
+    margin-left: 40% ;
+    &_plus{
+        margin-right: 10px ;
+    }
+    &_minus{
+        margin-left: 10px;
+    }
+}
