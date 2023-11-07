@@ -1,11 +1,12 @@
 import ContactItem from './ContactsItem'
 import s from './contacts.module.scss'
 const Contacts = (props) => { 
+    const handleDeleteItem = (idToDelete) => {
+        const  newList = props.list.filter(item => item.id !==idToDelete)
+        props.reRender(newList)
+    }
     const ContactsCollection = props.list.map(el => {
-        const handleDeleteItem = (idToDelete) => {
-            const  newList = props.list.filter(item => item.id !==idToDelete)
-            props.reRender(newList)
-        }
+        
         return (
             <ContactItem
                 key={el.id}
@@ -15,7 +16,6 @@ const Contacts = (props) => {
             />
         )
     })
-   
     return ( 
         <ul className={s.list}>
             {ContactsCollection}
